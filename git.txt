@@ -50,3 +50,19 @@ git status
 3. git reset --hard commitid
    回退版本,回退到以前的commitid版本号中
 ---------------------------------------------
+
+# v6 删除文件
+---------------------------------------------
+1. rm file.txt
+2. git rm file.txt
+3. git commit -m 'delete file.txt'
+4. git push
+---------------------------------------------
+# 误删文件-1
+1. rm file.txt
+2. git checkout -- file.txt
+---------------------------------------------
+1. git rm file.txt
+2. git reset HEAD
+3. git checkout -- file.txt
+---------------------------------------------
