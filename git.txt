@@ -34,7 +34,7 @@ git status
 git commit -m 'info'
 git status
 ---------------------------------------------
-3.将当前master分支的所有内容push到服务器上面
+3.将当前master分支的所有内容push到远程仓库
 git push
 git status
 ---------------------------------------------
