@@ -12,3 +12,6 @@ git log
 git log --pretty=oneline
 git reflog
 git reset --hard commit-id
+git reset --hard HEAD       (HEAD指当前版本)
+git reset --hard HEAD~1     (回到前一个版本)
+git reset --hard HEAD~10    (回到前十个版本)
