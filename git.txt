@@ -2,3 +2,7 @@
 git config --global user.email wanglei@xkeshi.com
 git config --global user.name wanglei@xkeshi.com
 
+# v2
+git add git.txt
+git commit -m 'version 1'
+git push
