@@ -6,3 +6,9 @@ git config --global user.name wanglei@xkeshi.com
 git add git.txt
 git commit -m 'version 1'
 git push
+
+# v3
+git log
+git log --pretty=oneline
+git reflog
+git reset --hard commit-id
