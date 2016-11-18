@@ -1,13 +1,13 @@
-# v1
+# v1 配置 git 用户及mail
 git config --global user.email wanglei@xkeshi.com
 git config --global user.name wanglei@xkeshi.com
 
-# v2
+# v2 添加 提交 上传
 git add git.txt
 git commit -m 'version 1'
 git push
 
-# v3
+# v3 查看提交命令 查看历史命令 重置commitid
 git log
 git log --pretty=oneline
 git reflog
