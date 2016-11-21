@@ -66,3 +66,8 @@ git status
 2. git reset HEAD
 3. git checkout -- file.txt
 ---------------------------------------------
+
+# v7 github 添加密钥
+1. 本地生成密钥文件
+2. 将公钥上传至github
+3. git clone 项目(use ssh protocol)
