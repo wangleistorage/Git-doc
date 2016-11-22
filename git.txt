@@ -1,15 +1,15 @@
 #!/bin/bash
 
-# 1.configure git user and mail
+# 1.配置git用户及邮箱
 git config --global user.email wanglei@xkeshi.com
 git config --global user.name wanglei@xkeshi.com
 
-# 2.git add commit push
+# 2.git 添加,提交,上传
 git add git.txt
 git commit -m 'version 1'
 git push
 
-# 3.git show log, show reflog, reset commitid
+# 3.git 查看日志,历史日志,重置commitid
 git log
 git log --pretty=oneline
 git reflog
@@ -18,7 +18,7 @@ git reset --hard HEAD       (HEAD指当前版本)
 git reset --hard HEAD~1     (回到前一个版本)
 git reset --hard HEAD~10    (回到前十个版本)
 
-# 4.git work zero and version repository
+# 4.git 工作区和版本库
 1.工作区(git工作目录/) 
 2.版本库(git工作目录下的.git/目录)
 
@@ -38,7 +38,7 @@ git push
 git status
 ---------------------------------------------
 
-# 5.git undo modify
+# 5.git 撤销修改
 1. git checkout -- git.txt
    丢弃当前工作区的修改
 
@@ -49,26 +49,26 @@ git status
    回退版本,回退到以前的commitid版本号中
 ---------------------------------------------
 
-# 6.delete file
+# 6.git 删除文件
 1. rm file.txt
 2. git rm file.txt
 3. git commit -m 'delete file.txt'
 4. git push
 
-# delete file-1
+# 回退-1
 1. rm file.txt
 2. git checkout -- file.txt
 
-# delete file-2
+# 回退-2
 1. git rm file.txt
 2. git reset HEAD
 3. git checkout -- file.txt
 ---------------------------------------------
 
-# 7.github add key
+# 7.github 添加key
 1. 本地生成密钥文件
 2. 将公钥上传至github
 3. git clone 项目(use ssh protocol)
 
-# 8.git clone priject
+# 8.git clone 项目
 git clone git@github.com:wangleistorage/test.git
