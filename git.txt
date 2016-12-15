@@ -76,3 +76,11 @@ git status
 
 # 8.git clone 项目
 git clone git@github.com:wangleistorage/test.git
+
+# 9.创建与合并分支
+1.创建分支 ---> git branch <name>
+2.查看分支 ---> git branch
+3.切换分支 ---> git checkout <name>
+4.创建+切换分支 ---> git checkout -b <name>
+5.合并某分支到当前分支 ---> git merge <name>
+6.删除分支 ---> git branch -d <name>
