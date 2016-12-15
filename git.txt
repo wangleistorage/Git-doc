@@ -77,6 +77,7 @@ git status
 # 8.git clone 项目
 git clone git@github.com:wangleistorage/test.git
 
+
 # 9.创建与合并分支
 1.创建分支 ---> git branch <name>
 2.查看分支 ---> git branch
