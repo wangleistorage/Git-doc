@@ -1,8 +1,9 @@
 #!/bin/bash
 
-# 1.配置git用户及邮箱
+# 1.配置git用户,邮箱,颜色
 git config --global user.email wanglei@xkeshi.com
 git config --global user.name wanglei@xkeshi.com
+git config --global color.ui true
 
 
 # 2.git 添加,提交,上传
