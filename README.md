@@ -1,15 +1,15 @@
 ## git 本地仓库的初始化及多节点批量同步
 
-### 需求：创建两个git本地仓库,分别位于192.168.143.202和192.168.143.210,当192.168.143.200修改配置的时候同时提交至两台git仓库中
+#### 需求：创建两个git本地仓库,分别位于192.168.143.202和192.168.143.210,当192.168.143.200修改配置的时候同时提交至两台git仓库中
 
-### 说明：
+#### 说明：
 ```
 192.168.143.200  # 修改配置文件的主机
 192.168.143.202  # git本地仓库-1
 192.168.143.210  # git本地仓库-2
 ```
 
-### 1.创建仓库
+#### 1.创建仓库
 ```
 # 192.168.143.210
 cd /opt
@@ -20,14 +20,14 @@ cd /opt
 git init --bare nginx_conf.git
 ```
 
-### 2.客户端clone
+#### 2.客户端clone
 ```
 # 192.168.143.200
 git clone 192.168.143.202:/opt/nginx_conf.git
 cd nginx_conf
 ```
 
-### 3.设置仓库地址
+#### 3.设置仓库地址
 ```
 cd nginx_conf
 vim .git/config
@@ -48,7 +48,7 @@ vim .git/config
         merge = refs/heads/master
 ```
 
-### 4.添加文件提交至仓库
+#### 4.添加文件提交至仓库
 ```
 [root@centos7-200 nginx_conf]# echo "test1" > test1.txt
 [root@centos7-200 nginx_conf]# echo "test2" > test2.txt
@@ -58,7 +58,7 @@ vim .git/config
 [root@centos7-200 nginx_conf]# git push origin master
 ```
 
-### 5.查看远程仓库
+#### 5.查看远程仓库
 ```
 [root@centos7-200 nginx_conf]# git remote -v
 origin	192.168.143.202:/opt/nginx_conf.git (fetch)
@@ -66,13 +66,13 @@ origin	192.168.143.202:/opt/nginx_conf.git (push)
 origin	192.168.143.210:/opt/nginx_conf.git (push)
 ```
 
-### 6.测试-删除当前工作目录重新git clone
+#### 6.测试-删除当前工作目录重新git clone
 ```
 git clone 192.168.143.210:/opt/nginx_conf.git
 git clone 192.168.143.202:/opt/nginx_conf.git
 ```
 
-### 7.通过在本地提交文件,并同步至三台nginx(集群or主备)
+#### 7.通过在本地提交文件,并同步至三台nginx(集群or主备)
 ```
 touch Makefile
 下面命令可以自定义,可以通过Ansible,也可以通过shell,定义好之后执行make push即可
