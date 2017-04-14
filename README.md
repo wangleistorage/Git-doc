@@ -78,6 +78,7 @@ touch Makefile
 下面命令可以自定义,可以通过Ansible,也可以通过shell,定义好之后执行make push即可
 
 push:	update to nginx1/nginx2/nginx3
+	git push 
 	ssh nginx1 "cd /usr/local/nginx/conf; git pull; /usr/local/nginx/sbin/nginx -t && /usr/local/nginx/sbin/ngnix -s reload"
 	ssh nginx2 "cd /usr/local/nginx/conf; git pull; /usr/local/nginx/sbin/nginx -t && /usr/local/nginx/sbin/ngnix -s reload"
 	ssh nginx3 "cd /usr/local/nginx/conf; git pull; /usr/local/nginx/sbin/nginx -t && /usr/local/nginx/sbin/ngnix -s reload"
